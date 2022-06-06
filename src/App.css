@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.status {
+  text-align: start;
+  margin-left: 2rem;
+}
+
+.hp {
+  font-size: 40px;
+}
+
+button {
+  font-size: 20px;
+}
+
+.name {
+  font-size: 50px
+}
