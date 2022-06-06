@@ -11,20 +11,19 @@ export default class App extends Component {
     pokemon2_hp: 120,
     pokemon2_image: "https://w7.pngwing.com/pngs/957/190/png-transparent-green-pokemon-character-pokemon-red-and-blue-ash-ketchum-bulbasaur-wikia-pokemon-marine-mammal-mammal-vertebrate-thumbnail.png",
 
-    status: '',
-    damage: 10
+    status: ''
   }
 
   handleAttackToPokemon1 = () => {
     this.setState(state => ({
-      pokemon1_hp: this.state.pokemon1_hp - this.state.damage,
+      pokemon1_hp: this.state.pokemon1_hp - Math.round(Math.random()*10),
       status: 'Bulbasaur attacked Pikachu'
     }))
   }
 
   handleAttackToPokemon2 = () => {
     this.setState(state => ({
-      pokemon2_hp: this.state.pokemon2_hp - this.state.damage,
+      pokemon2_hp: this.state.pokemon2_hp - Math.round(Math.random()*10),
       status: 'Pikachu attacked Bulbasaur'
     }))
   }
@@ -42,8 +41,8 @@ export default class App extends Component {
               <td className="name">{this.state.pokemon2_name}</td>
           </tr>
           <tr>
-              <td><img src={this.state.pokemon1_image}/></td>
-              <td><img src={this.state.pokemon2_image}/></td>
+              <td><img src={this.state.pokemon1_image} alt="Pikachu"/></td>
+              <td><img src={this.state.pokemon2_image} alt="Bulbasaur"/></td>
           </tr>
           <tr>
               <td><button onClick={this.handleAttackToPokemon2}>ATTACK</button></td>
