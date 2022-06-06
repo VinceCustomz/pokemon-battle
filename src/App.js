@@ -18,14 +18,14 @@ export default class App extends Component {
   handleAttackToPokemon1 = () => {
     this.setState(state => ({
       pokemon1_hp: this.state.pokemon1_hp - this.state.damage,
-      status: 'Pikachu just took damage'
+      status: 'Bulbasaur attacked Pikachu'
     }))
   }
 
   handleAttackToPokemon2 = () => {
     this.setState(state => ({
       pokemon2_hp: this.state.pokemon2_hp - this.state.damage,
-      status: 'Bulbasaur just took damage'
+      status: 'Pikachu attacked Bulbasaur'
     }))
   }
 
